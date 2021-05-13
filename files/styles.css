@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(25deg, #ff9969, #95d755);
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.dark {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 0.8em;
+  border-radius: 1.5em;
+}
+
+.heading {
+  font-size: 2.5em;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 0.07em;
+  align-items: center;
+  margin-top: 0.8em;
+  font-weight: bold;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.container {
+  height: 90vh;
+  box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 20px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+  transition: all 0.5s;
+}
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
+
+.card {
+  width: 350px;
+  min-height: 280px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(3.2px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: myanimation 1s ease;
+  transition: all 1s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.state,
+.cases,
+.new,
+.active {
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: inset 0px 0px 12px 0 rgba(48, 46, 46, 0.5);
+}
+
+.state-content,
+.cases-content,
+.new-content,
+.active-content {
+  margin: 10px 0 20px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px 12px;
+  border-radius: 15px;
+}
+
+@keyframes myanimation {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.dark-mode {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
